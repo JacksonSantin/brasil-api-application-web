@@ -2,7 +2,7 @@
   <v-card class="mx-auto" width="850">
     <v-card-title class="text-center pa-0">
       <v-toolbar flat dark color="#2466E0" class="text-white">
-        <v-toolbar-title>CEP - V2</v-toolbar-title>
+        <v-toolbar-title>CEP</v-toolbar-title>
       </v-toolbar>
     </v-card-title>
     <v-card-text class="mt-5">
