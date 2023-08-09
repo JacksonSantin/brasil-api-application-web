@@ -2,7 +2,7 @@ import { ref, onMounted } from "vue";
 import { headersBank } from "../const/headersBank";
 import { Banks } from "../domain/model/banks";
 
-const brasilApiController = (
+const bankController = (
   getBanksUseCase,
   getBanksWithCodeUseCase,
 ) => () => {
@@ -29,4 +29,4 @@ const brasilApiController = (
   }
 }
 
-export { brasilApiController }
+export { bankController }

@@ -1,12 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/module/banks/view/brasilAPI.vue'
+import Banks from '@/module/banks/view/bankScreen.vue'
+import Cep from '@/module/cep/view/cepScreen.vue'
 
 const routes = [
   { path: '/', redirect: '/banks' },
   {
     path: '/banks',
     name: 'Banks',
-    component: Home
+    component: Banks
+  },
+  {
+    path: '/cep',
+    name: 'Cep',
+    component: Cep
   },
 ]
 

@@ -10,10 +10,10 @@
       <v-divider></v-divider>
       <v-list density="compact" nav>
         <router-link
-          class="router-link"
           v-for="item in menu"
           :key="item.nome"
           :to="item.path"
+          :class="['router-link', { active: isActiveRoute(item.path) }]"
         >
           <v-list-item-title class="px-5 my-2">
             <v-icon left class="pr-10" size="small">{{
