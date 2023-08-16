@@ -47,6 +47,7 @@
         </v-row>
       </v-form>
     </v-card-text>
+    <v-divider></v-divider>
     <v-card-actions>
       <v-btn
         class="text-none text-subtitle-1 text-white"

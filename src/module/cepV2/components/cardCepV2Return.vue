@@ -67,11 +67,20 @@
         </v-row>
         <v-row dense>
           <v-col cols="12">
-            <div id="map"></div>
+            <div
+              v-if="
+                controller.modelCepV2.value.location.coordinates.latitude !==
+                  undefined &&
+                controller.modelCepV2.value.location.coordinates.longitude !==
+                  undefined
+              "
+              id="map"
+            ></div>
           </v-col>
         </v-row>
       </v-form>
     </v-card-text>
+    <v-divider></v-divider>
     <v-card-actions>
       <v-btn
         class="text-none text-subtitle-1 text-white"
@@ -96,5 +105,16 @@ defineProps({
 });
 </script>
 
-<style>
+<script>
+export default {
+  mounted() {
+    this.controller.buscaCoordenadas();
+  },
+};
+</script>
+
+<style scoped>
+#map {
+  height: 300px;
+}
 </style>
