@@ -3,6 +3,7 @@ import Banks from '@/module/banks/view/bankScreen.vue'
 import Cep from '@/module/cep/view/cepScreen.vue'
 import CepV2 from '@/module/cepV2/view/cepV2Screen.vue'
 import CNPJ from '@/module/cnpj/view/cnpjScreen.vue'
+import Corretoras from "@/module/corretoras/view/corretorasScreen.vue"
 
 const routes = [
   { path: '/', redirect: '/banks' },
@@ -25,6 +26,11 @@ const routes = [
     path: '/cnpj',
     name: 'CNPJ',
     component: CNPJ
+  },
+  {
+    path: '/corretoras',
+    name: 'Corretoras',
+    component: Corretoras
   },
 ]
 
