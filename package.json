@@ -13,6 +13,7 @@
     "dayjs": "^1.11.9",
     "leaflet": "^1.9.4",
     "roboto-fontface": "*",
+    "toastify-js": "^1.12.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vue-the-mask": "^0.11.1",
