@@ -9,13 +9,18 @@ const cepController = (
   const loading = ref(false)
   const formScreen = ref(true)
 
-  const getCep = async () => {
+  const getCepWithoutFormatting = () => {
+    const cepNumbersOnly = typedZipCode.value.replace(/\D/g, '');
+    getCep(cepNumbersOnly);
+  }
+
+  const getCep = async (cepNumbersOnly) => {
     try {
       loading.value = true
       formScreen.value = true
 
       const param = {
-        cep: typedZipCode.value
+        cep: cepNumbersOnly
       }
 
       modelCep.value = await getCepUseCase(param)
@@ -42,7 +47,7 @@ const cepController = (
     modelCep,
     loading,
     formScreen,
-    getCep,
+    getCepWithoutFormatting,
     returnToFormScreen
   }
 }

@@ -14,8 +14,7 @@
             placeholder="Digite aqui o seu CEP"
             variant="underlined"
             density="compact"
-            hint="Digite apenas numeros"
-            counter="8"
+            v-mask="'#####-###'"
             clearable
             v-model="controller.typedZipCode.value"
           ></v-text-field>
@@ -32,7 +31,7 @@
         block
         :loading="controller.loading.value"
         :disabled="controller.loading.value"
-        @click="controller.getCep()"
+        @click="controller.getCepWithoutFormatting()"
       >
         BUSCAR
       </v-btn>

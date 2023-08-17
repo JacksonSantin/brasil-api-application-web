@@ -2,7 +2,7 @@
   <v-card class="mx-auto" width="850">
     <v-card-title class="text-center pa-0">
       <v-toolbar flat dark color="#2466E0" class="text-white">
-        <v-toolbar-title>CEP - V2</v-toolbar-title>
+        <v-toolbar-title>CNPJ</v-toolbar-title>
       </v-toolbar>
     </v-card-title>
     <v-card-text class="mt-5">
@@ -10,13 +10,13 @@
         <v-col cols="12">
           <v-text-field
             color="#2466E0"
-            label="CEP"
-            placeholder="Digite aqui o seu CEP"
+            label="CNPJ"
+            placeholder="Digite aqui o seu CNPJ"
             variant="underlined"
             density="compact"
-            v-mask="'#####-###'"
+            v-mask="'##.###.###/####-##'"
             clearable
-            v-model="controller.typedZipCode.value"
+            v-model="controller.typedCnpj.value"
           ></v-text-field>
         </v-col>
       </v-row>
@@ -31,7 +31,7 @@
         block
         :loading="controller.loading.value"
         :disabled="controller.loading.value"
-        @click="controller.getCepWithoutFormatting()"
+        @click="controller.getCnpjWithoutFormatting()"
       >
         BUSCAR
       </v-btn>

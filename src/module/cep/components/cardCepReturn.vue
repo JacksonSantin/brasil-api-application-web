@@ -13,6 +13,7 @@
               label="CEP"
               variant="underlined"
               density="compact"
+              v-mask="'#####-###'"
               hide-details
               v-model="controller.modelCep.value.cep"
             ></v-text-field>
