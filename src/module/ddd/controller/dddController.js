@@ -46,7 +46,7 @@ const dddController = (
   const returnToFormScreen = async () => {
     formScreen.value = true
     loading.value = false
-    typedDdd.value = ""
+    typedDdd.value = 0
   }
 
   return {

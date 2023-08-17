@@ -3,8 +3,9 @@ import Banks from '@/module/banks/view/bankScreen.vue'
 import Cep from '@/module/cep/view/cepScreen.vue'
 import CepV2 from '@/module/cepV2/view/cepV2Screen.vue'
 import CNPJ from '@/module/cnpj/view/cnpjScreen.vue'
-import Corretoras from "@/module/brokers/view/brokersScreen.vue"
+import Brokers from "@/module/brokers/view/brokersScreen.vue"
 import DDD from "@/module/ddd/view/dddScreen.vue"
+import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue"
 
 const routes = [
   { path: '/', redirect: '/banks' },
@@ -31,12 +32,17 @@ const routes = [
   {
     path: '/corretoras',
     name: 'Corretoras',
-    component: Corretoras
+    component: Brokers
   },
   {
     path: '/ddd',
     name: 'DDD',
     component: DDD
+  },
+  {
+    path: '/feriados-nacionais',
+    name: 'Feriados Nacionais',
+    component: NationalHolidays
   },
 ]
 
