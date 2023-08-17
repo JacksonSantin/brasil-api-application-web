@@ -1,6 +1,7 @@
 import { ref } from "vue";
 import { CepV2 } from "../domain/model/cepV2";
 import L from 'leaflet'
+import Toastify from 'toastify-js'
 
 
 const cepV2Controller = (
@@ -34,7 +35,17 @@ const cepV2Controller = (
       }
 
     } catch (error) {
-      throw error
+      Toastify({
+        text: error,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        style: {
+          background: "red",
+          borderRadius: "50px"
+        },
+      }).showToast();
     } finally {
       loading.value = true
     }

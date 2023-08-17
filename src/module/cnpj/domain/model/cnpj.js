@@ -1,3 +1,4 @@
+import dayjs from "dayjs"
 import { CnaesSecundarios } from "./cnaesSecundarios"
 import { Qsa } from "./qsa"
 
@@ -49,11 +50,11 @@ class Cnpj {
     this.nome_fantasia = nome_fantasia
     this.situacao_cadastral = situacao_cadastral
     this.descricao_situacao_cadastral = descricao_situacao_cadastral
-    this.data_situacao_cadastral = data_situacao_cadastral
+    this.data_situacao_cadastral = data_situacao_cadastral ? dayjs(data_situacao_cadastral, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
     this.motivo_situacao_cadastral = motivo_situacao_cadastral
     this.nome_cidade_exterior = nome_cidade_exterior
     this.codigo_natureza_juridica = codigo_natureza_juridica
-    this.data_inicio_atividade = data_inicio_atividade
+    this.data_inicio_atividade = data_inicio_atividade ? dayjs(data_inicio_atividade, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
     this.cnae_fiscal = cnae_fiscal
     this.cnae_fiscal_descricao = cnae_fiscal_descricao
     this.descricao_tipo_logradouro = descricao_tipo_logradouro
@@ -73,11 +74,11 @@ class Cnpj {
     this.porte = porte
     this.descricao_porte = descricao_porte
     this.opcao_pelo_simples = opcao_pelo_simples
-    this.data_opcao_pelo_simples = data_opcao_pelo_simples
-    this.data_exclusao_do_simples = data_exclusao_do_simples
+    this.data_opcao_pelo_simples = data_opcao_pelo_simples ? dayjs(data_opcao_pelo_simples, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
+    this.data_exclusao_do_simples = data_exclusao_do_simples ? dayjs(data_exclusao_do_simples, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
     this.opcao_pelo_mei = opcao_pelo_mei
     this.situacao_especial = situacao_especial
-    this.data_situacao_especial = data_situacao_especial
+    this.data_situacao_especial = data_situacao_especial ? dayjs(data_situacao_especial, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
     this.cnaes_secundarios = cnaes_secundarios.map((r) =>
       new CnaesSecundarios(r)
     )

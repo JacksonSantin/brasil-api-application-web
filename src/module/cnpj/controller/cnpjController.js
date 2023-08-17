@@ -1,6 +1,6 @@
 import { ref } from "vue";
 import { Cnpj } from "../domain/model/cnpj";
-import dayjs from "dayjs";
+import Toastify from 'toastify-js'
 
 const cnpjController = (
   getCnpjUseCase
@@ -26,19 +26,22 @@ const cnpjController = (
 
       modelCnpj.value = await getCnpjUseCase(param)
 
-      modelCnpj.value.data_inicio_atividade = modelCnpj.value.data_inicio_atividade ? dayjs(modelCnpj.value.data_inicio_atividade, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
-      modelCnpj.value.data_situacao_cadastral = modelCnpj.value.data_situacao_cadastral ? dayjs(modelCnpj.value.data_situacao_cadastral, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
-      modelCnpj.value.data_opcao_pelo_simples = modelCnpj.value.data_opcao_pelo_simples ? dayjs(modelCnpj.value.data_opcao_pelo_simples, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
-      modelCnpj.value.data_exclusao_do_simples = modelCnpj.value.data_exclusao_do_simples ? dayjs(modelCnpj.value.data_exclusao_do_simples, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
-      modelCnpj.value.data_situacao_especial = modelCnpj.value.data_situacao_especial ? dayjs(modelCnpj.value.data_situacao_especial, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
-      modelCnpj.value.data_entrada_sociedade = modelCnpj.value.data_entrada_sociedade ? dayjs(modelCnpj.value.data_entrada_sociedade, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
-
       if (modelCnpj.value) {
         formScreen.value = false
       }
 
     } catch (error) {
-      throw error
+      Toastify({
+        text: error,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        style: {
+          background: "red",
+          borderRadius: "50px"
+        },
+      }).showToast();
     } finally {
       loading.value = false
     }

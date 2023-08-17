@@ -4,6 +4,9 @@ const getCepV2Repository = (axios) => async (cep) => {
 
     return response?.data ?? {}
   } catch (error) {
+    if(error.response.status === 404)  {
+      throw error.response.data.message
+    }
     throw error
   }
 }

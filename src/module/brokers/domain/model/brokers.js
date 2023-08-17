@@ -1,4 +1,6 @@
-class Corretoras {
+import dayjs from "dayjs"
+
+class Brokers {
   constructor({
     cnpj = "",
     type = "",
@@ -34,12 +36,12 @@ class Corretoras {
     this.bairro = bairro
     this.complemento = complemento
     this.logradouro = logradouro
-    this.data_patrimonio_liquido = data_patrimonio_liquido
+    this.data_patrimonio_liquido = data_patrimonio_liquido ? dayjs(data_patrimonio_liquido, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
     this.valor_patrimonio_liquido = valor_patrimonio_liquido
     this.codigo_cvm = codigo_cvm
-    this.data_inicio_situacao = data_inicio_situacao
-    this.data_registro = data_registro
+    this.data_inicio_situacao = data_inicio_situacao ? dayjs(data_inicio_situacao, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
+    this.data_registro = data_registro ? dayjs(data_registro, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
   }
 }
 
-export { Corretoras }
+export { Brokers }

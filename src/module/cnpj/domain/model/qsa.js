@@ -1,3 +1,5 @@
+import dayjs from "dayjs"
+
 class Qsa {
   constructor({
     pais = null,
@@ -22,7 +24,7 @@ class Qsa {
     this.cnpj_cpf_do_socio = cnpj_cpf_do_socio
     this.qualificacao_socio = qualificacao_socio
     this.codigo_faixa_etaria = codigo_faixa_etaria
-    this.data_entrada_sociedade = data_entrada_sociedade
+    this.data_entrada_sociedade = data_entrada_sociedade ? dayjs(data_entrada_sociedade, "YYYY-MM-DD").format("DD/MM/YYYY") : ""
     this.identificador_de_socio = identificador_de_socio
     this.cpf_representante_legal = cpf_representante_legal
     this.nome_representante_legal = nome_representante_legal

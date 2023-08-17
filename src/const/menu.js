@@ -35,6 +35,11 @@ export const menu = [
     path: "/ddd",
   },
   {
+    nome: "Feriados Nacionais",
+    icone: "mdi-calendar-month",
+    path: "/feriados-nacionais",
+  },
+  {
     nome: "FIPE",
     icone: "mdi-car-side",
     path: "/fipe",

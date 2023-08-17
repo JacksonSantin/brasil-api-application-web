@@ -1,6 +1,7 @@
 import { ref, onMounted } from "vue";
 import { headersBank } from "../const/headersBank";
 import { Banks } from "../domain/model/banks";
+import Toastify from 'toastify-js'
 
 const bankController = (
   getBanksUseCase,
@@ -15,7 +16,17 @@ const bankController = (
     try {
       modelBank.value = await getBanksUseCase()
     } catch (error) {
-      throw error
+      Toastify({
+        text: error,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        style: {
+          background: "red",
+          borderRadius: "50px"
+        },
+      }).showToast();
     }
   }
 

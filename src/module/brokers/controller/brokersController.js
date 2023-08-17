@@ -1,35 +1,33 @@
 import { ref } from "vue";
-import { Cep } from "../domain/model/cep";
+import { Brokers } from "../domain/model/brokers";
 import Toastify from 'toastify-js'
 
-const cepController = (
-  getCepUseCase,
+const brokersController = (
+  getBrokersWithCnpjUseCase
 ) => () => {
-  const typedZipCode = ref("")
-  const modelCep = ref(new Cep({}))
+  const typedCnpj = ref("")
   const loading = ref(false)
   const formScreen = ref(true)
+  const modelBrokers = ref(new Brokers({}))
 
-  const getCepWithoutFormatting = () => {
-    const cepNumbersOnly = typedZipCode.value.replace(/\D/g, '');
-    getCep(cepNumbersOnly);
+  const getCnpjWithoutFormatting = () => {
+    const cnpjNumbersOnly = typedCnpj.value.replace(/\D/g, '');
+    getBrokers(cnpjNumbersOnly);
   }
 
-  const getCep = async (cepNumbersOnly) => {
+  const getBrokers = async (cnpjNumbersOnly) => {
     try {
       loading.value = true
-      formScreen.value = true
 
-      const param = {
-        cep: cepNumbersOnly
+      const params = {
+        cnpj: cnpjNumbersOnly
       }
 
-      modelCep.value = await getCepUseCase(param)
+      modelBrokers.value = await getBrokersWithCnpjUseCase(params)
 
-      if (modelCep.value) {
+      if (modelBrokers.value) {
         formScreen.value = false
       }
-
     } catch (error) {
       Toastify({
         text: error,
@@ -43,24 +41,24 @@ const cepController = (
         },
       }).showToast();
     } finally {
-      loading.value = true
+      loading.value = false
     }
   }
 
   const returnToFormScreen = async () => {
     formScreen.value = true
     loading.value = false
-    typedZipCode.value = ""
+    typedCnpj.value = ""
   }
 
   return {
-    typedZipCode,
-    modelCep,
+    typedCnpj,
     loading,
     formScreen,
-    getCepWithoutFormatting,
+    modelBrokers,
+    getCnpjWithoutFormatting,
     returnToFormScreen
   }
 }
 
-export { cepController }
+export { brokersController }

@@ -15,7 +15,7 @@
               density="compact"
               v-mask="'##.###.###/####-##'"
               hide-details
-              v-model="controller.modelCorretoras.value.cnpj"
+              v-model="controller.modelBrokers.value.cnpj"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -24,7 +24,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.type"
+              v-model="controller.modelBrokers.value.type"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -33,7 +33,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.nome_social"
+              v-model="controller.modelBrokers.value.nome_social"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -44,7 +44,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.nome_comercial"
+              v-model="controller.modelBrokers.value.nome_comercial"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -53,7 +53,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.status"
+              v-model="controller.modelBrokers.value.status"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -62,7 +62,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.email"
+              v-model="controller.modelBrokers.value.email"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -74,7 +74,7 @@
               density="compact"
               v-mask="['(##) ####-####', '(##) #####-####']"
               hide-details
-              v-model="controller.modelCorretoras.value.telefone"
+              v-model="controller.modelBrokers.value.telefone"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -84,7 +84,7 @@
               density="compact"
               v-mask="'#####-###'"
               hide-details
-              v-model="controller.modelCorretoras.value.cep"
+              v-model="controller.modelBrokers.value.cep"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -93,7 +93,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.pais"
+              v-model="controller.modelBrokers.value.pais"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -104,7 +104,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.uf"
+              v-model="controller.modelBrokers.value.uf"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -113,7 +113,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.municipio"
+              v-model="controller.modelBrokers.value.municipio"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -122,7 +122,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.bairro"
+              v-model="controller.modelBrokers.value.bairro"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -133,7 +133,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.complemento"
+              v-model="controller.modelBrokers.value.complemento"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -142,7 +142,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.logradouro"
+              v-model="controller.modelBrokers.value.logradouro"
             ></v-text-field>
           </v-col>
           <v-col cols="4">
@@ -151,7 +151,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.data_patrimonio_liquido"
+              v-model="controller.modelBrokers.value.data_patrimonio_liquido"
             ></v-text-field>
           </v-col>
         </v-row>
@@ -164,7 +164,7 @@
               v-mask="'R$ #.###.###.###,##'"
               hide-details
               v-model="
-                controller.modelCorretoras.value.valor_patrimonio_liquido
+                controller.modelBrokers.value.valor_patrimonio_liquido
               "
             ></v-text-field>
           </v-col>
@@ -174,7 +174,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.codigo_cvm"
+              v-model="controller.modelBrokers.value.codigo_cvm"
             ></v-text-field>
           </v-col>
           <v-col cols="3">
@@ -183,7 +183,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.data_inicio_situacao"
+              v-model="controller.modelBrokers.value.data_inicio_situacao"
             ></v-text-field>
           </v-col>
           <v-col cols="3">
@@ -192,7 +192,7 @@
               variant="underlined"
               density="compact"
               hide-details
-              v-model="controller.modelCorretoras.value.data_registro"
+              v-model="controller.modelBrokers.value.data_registro"
             ></v-text-field>
           </v-col>
         </v-row>
