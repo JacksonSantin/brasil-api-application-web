@@ -6,6 +6,7 @@ import CNPJ from '@/module/cnpj/view/cnpjScreen.vue'
 import Brokers from "@/module/brokers/view/brokersScreen.vue"
 import DDD from "@/module/ddd/view/dddScreen.vue"
 import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue"
+import ISBN from "@/module/ISBN/view/isbnScreen.vue"
 
 const routes = [
   { path: '/', redirect: '/banks' },
@@ -43,6 +44,11 @@ const routes = [
     path: '/feriados-nacionais',
     name: 'Feriados Nacionais',
     component: NationalHolidays
+  },
+  {
+    path: '/isbn',
+    name: 'ISBN',
+    component: ISBN
   },
 ]
 
