@@ -7,7 +7,9 @@ const isbnController = (
 ) => () => {
   const isbn = ref("")
   const authors = ref([])
+  const subjects = ref([])
   const modelIsbn = ref(new Isbn({}))
+  const dimensions = ref({})
   const loading = ref(false)
   const formScreen = ref(true)
 
@@ -23,6 +25,8 @@ const isbnController = (
       modelIsbn.value = await getIsbnUseCase(params)
 
       authors.value = [...modelIsbn.value.authors]
+      subjects.value = [...modelIsbn.value.subjects]
+      dimensions.value = modelIsbn.value.dimensions
 
       if (modelIsbn.value) {
         formScreen.value = false
@@ -55,8 +59,10 @@ const isbnController = (
     loading,
     isbn,
     modelIsbn,
+    dimensions,
     formScreen,
     authors,
+    subjects,
     getIsbn,
     returnToFormScreen
   }
