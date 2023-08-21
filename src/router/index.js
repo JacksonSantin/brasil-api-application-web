@@ -7,6 +7,7 @@ import Brokers from "@/module/brokers/view/brokersScreen.vue"
 import DDD from "@/module/ddd/view/dddScreen.vue"
 import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue"
 import ISBN from "@/module/ISBN/view/isbnScreen.vue"
+import PIX from "@/module/pix/view/pixScreen.vue"
 
 const routes = [
   { path: '/', redirect: '/banks' },
@@ -49,6 +50,11 @@ const routes = [
     path: '/isbn',
     name: 'ISBN',
     component: ISBN
+  },
+  {
+    path: '/pix',
+    name: 'PIX',
+    component: PIX
   },
 ]
 

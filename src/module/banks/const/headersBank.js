@@ -1,6 +1,6 @@
 export const headersBank = [
   {
-    title: 'ISBP',
+    title: 'ISPB',
     value: 'ispb',
     align: 'start',
   },
