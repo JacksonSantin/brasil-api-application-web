@@ -1,32 +1,32 @@
 export const headers = [
   {
     title: 'ISPB',
-    value: 'ispb',
-    align: 'start',
+    key: 'ispb',
+    align: 'end',
   },
   {
     title: 'Nome',
-    value: 'nome',
-    align: 'start',
+    key: 'nome',
+    align: 'end',
   },
   {
     title: 'Nome Reduzido',
-    value: 'nome_reduzido',
-    align: 'start',
+    key: 'nome_reduzido',
+    align: 'end',
   },
   {
     title: 'Modalidade Participação',
-    value: 'modalidade_participacao',
-    align: 'start',
+    key: 'modalidade_participacao',
+    align: 'end',
   },
   {
     title: 'Tipo Participação',
-    value: 'tipo_participacao',
-    align: 'start',
+    key: 'tipo_participacao',
+    align: 'end',
   },
   {
     title: 'Início Operação',
-    value: 'ispb',
+    key: 'ispb',
     align: 'inicio_operacao',
   },
 ]

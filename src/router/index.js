@@ -8,6 +8,7 @@ import DDD from "@/module/ddd/view/dddScreen.vue"
 import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue"
 import ISBN from "@/module/ISBN/view/isbnScreen.vue"
 import PIX from "@/module/pix/view/pixScreen.vue"
+import RegistroBR from "@/module/registroBr/view/registroBrScreen.vue"
 
 const routes = [
   { path: '/', redirect: '/banks' },
@@ -55,6 +56,11 @@ const routes = [
     path: '/pix',
     name: 'PIX',
     component: PIX
+  },
+  {
+    path: '/registro-br',
+    name: 'Registro BR',
+    component: RegistroBR
   },
 ]
 

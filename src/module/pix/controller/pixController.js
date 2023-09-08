@@ -10,6 +10,7 @@ const pixController = (
   const rows = ref([])
   const loading = ref(false)
   const header = ref(headers)
+  const itemsPerPage = ref(30)
 
   const getPix = async () => {
     try {
@@ -42,6 +43,7 @@ const pixController = (
     modelPix,
     header,
     rows,
+    itemsPerPage
   }
 }
 
