@@ -47,13 +47,13 @@
             ></v-text-field>
           </v-col>
           <v-col cols="6">
-            <v-text-field
-              label="exempt"
-              variant="underlined"
-              density="compact"
-              hide-details
+            <v-switch
               v-model="controller.modelRegistroBr.value.exempt"
-            ></v-text-field>
+              hide-details
+              inset
+              disabled
+              :label="`${!controller.modelRegistroBr.value.exempt ? 'Não' : 'Sim'}`"
+            ></v-switch>
           </v-col>
         </v-row>
         <v-row v-for="(host, index) in controller.hosts.value" :key="index">
@@ -64,6 +64,26 @@
               density="compact"
               hide-details
               v-model="controller.hosts.value[index]"
+            ></v-text-field>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="6">
+            <v-text-field
+              label="Status de Publicação"
+              variant="underlined"
+              density="compact"
+              hide-details
+              v-model="controller.modelRegistroBr.value.publicationStatus"
+            ></v-text-field>
+          </v-col>
+          <v-col cols="6">
+            <v-text-field
+              label="Data de Expiração"
+              variant="underlined"
+              density="compact"
+              hide-details
+              v-model="controller.modelRegistroBr.value.expiresAt"
             ></v-text-field>
           </v-col>
         </v-row>

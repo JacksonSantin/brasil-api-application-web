@@ -9,6 +9,7 @@ import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScr
 import ISBN from "@/module/ISBN/view/isbnScreen.vue"
 import PIX from "@/module/pix/view/pixScreen.vue"
 import RegistroBR from "@/module/registroBr/view/registroBrScreen.vue"
+import Taxas from "@/module/taxa/view/taxaScreen.vue"
 
 const routes = [
   { path: '/', redirect: '/banks' },
@@ -61,6 +62,11 @@ const routes = [
     path: '/registro-br',
     name: 'Registro BR',
     component: RegistroBR
+  },
+  {
+    path: '/taxas',
+    name: 'Taxas',
+    component: Taxas
   },
 ]
 
