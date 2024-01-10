@@ -1,9 +1,8 @@
 <template>
    <v-data-table
-    v-model:items-per-page="controller.itemsPerPage"
-    :headers="controller.header"
-    :items="controller.rows"
-    item-value="ispb"
+    :headers="controller.header.value"
+    :items="controller.rows.value"
+    density="compact"
     class="elevation-1"
   ></v-data-table>
 </template>

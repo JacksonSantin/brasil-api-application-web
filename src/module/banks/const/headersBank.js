@@ -1,22 +1,19 @@
 export const headersBank = [
   {
-    title: 'ISPB',
-    value: 'ispb',
-    align: 'start',
+    title: "Código",
+    key: "code",
   },
   {
-    title: 'Name',
-    value: 'name',
-    align: 'end',
+    title: "ISPB",
+    key: "ispb",
   },
   {
-    title: 'Código',
-    value: 'code',
-    align: 'end',
+    title: "Name",
+    key: "name",
   },
   {
-    title: 'Nome Completo',
-    value: 'fullName',
-    align: 'end',
+    title: "Nome Completo",
+    key: "fullName",
   },
-]
+  { title: "Ações", key: "actions", sortable: false },
+];
