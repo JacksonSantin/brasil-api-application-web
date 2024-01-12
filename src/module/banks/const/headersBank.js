@@ -1,4 +1,5 @@
 export const headersBank = [
+  { title: "Ações", key: "actions", sortable: false },
   {
     title: "Código",
     key: "code",
@@ -15,5 +16,4 @@ export const headersBank = [
     title: "Nome Completo",
     key: "fullName",
   },
-  { title: "Ações", key: "actions", sortable: false },
 ];

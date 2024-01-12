@@ -1,78 +1,90 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Banks from '@/module/banks/view/bankScreen.vue'
-import Cep from '@/module/cep/view/cepScreen.vue'
-import CepV2 from '@/module/cepV2/view/cepV2Screen.vue'
-import CNPJ from '@/module/cnpj/view/cnpjScreen.vue'
-import Brokers from "@/module/brokers/view/brokersScreen.vue"
-import DDD from "@/module/ddd/view/dddScreen.vue"
-import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue"
-import ISBN from "@/module/ISBN/view/isbnScreen.vue"
-import PIX from "@/module/pix/view/pixScreen.vue"
-import RegistroBR from "@/module/registroBr/view/registroBrScreen.vue"
-import Taxas from "@/module/taxa/view/taxaScreen.vue"
+import { createRouter, createWebHistory } from "vue-router";
+import Banks from "@/module/banks/view/bankScreen.vue";
+import Cep from "@/module/cep/view/cepScreen.vue";
+import CepV2 from "@/module/cepV2/view/cepV2Screen.vue";
+import CNPJ from "@/module/cnpj/view/cnpjScreen.vue";
+import Brokers from "@/module/brokers/view/brokersScreen.vue";
+import DDD from "@/module/ddd/view/dddScreen.vue";
+import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue";
+import IBGE from "@/module/IBGE/view/ibgeScreen.vue";
+import ISBN from "@/module/ISBN/view/isbnScreen.vue";
+import NCM from "@/module/ncm/view/ncmScreen.vue";
+import PIX from "@/module/pix/view/pixScreen.vue";
+import RegistroBR from "@/module/registroBr/view/registroBrScreen.vue";
+import Taxas from "@/module/taxa/view/taxaScreen.vue";
 
 const routes = [
-  { path: '/', redirect: '/banks' },
+  { path: "/", redirect: "/banks" },
   {
-    path: '/banks',
-    name: 'Banks',
-    component: Banks
+    path: "/banks",
+    name: "Banks",
+    component: Banks,
   },
   {
-    path: '/cep',
-    name: 'Cep',
-    component: Cep
+    path: "/cep",
+    name: "Cep",
+    component: Cep,
   },
   {
-    path: '/cep-v2',
-    name: 'Cep V2',
-    component: CepV2
+    path: "/cep-v2",
+    name: "Cep V2",
+    component: CepV2,
   },
   {
-    path: '/cnpj',
-    name: 'CNPJ',
-    component: CNPJ
+    path: "/cnpj",
+    name: "CNPJ",
+    component: CNPJ,
   },
   {
-    path: '/corretoras',
-    name: 'Corretoras',
-    component: Brokers
+    path: "/corretoras",
+    name: "Corretoras",
+    component: Brokers,
   },
   {
-    path: '/ddd',
-    name: 'DDD',
-    component: DDD
+    path: "/ddd",
+    name: "DDD",
+    component: DDD,
   },
   {
-    path: '/feriados-nacionais',
-    name: 'Feriados Nacionais',
-    component: NationalHolidays
+    path: "/feriados-nacionais",
+    name: "Feriados Nacionais",
+    component: NationalHolidays,
   },
   {
-    path: '/isbn',
-    name: 'ISBN',
-    component: ISBN
+    path: "/ibge",
+    name: "IBGE",
+    component: IBGE,
   },
   {
-    path: '/pix',
-    name: 'PIX',
-    component: PIX
+    path: "/isbn",
+    name: "ISBN",
+    component: ISBN,
   },
   {
-    path: '/registro-br',
-    name: 'Registro BR',
-    component: RegistroBR
+    path: "/ncm",
+    name: "NCM",
+    component: NCM,
   },
   {
-    path: '/taxas',
-    name: 'Taxas',
-    component: Taxas
+    path: "/pix",
+    name: "PIX",
+    component: PIX,
   },
-]
+  {
+    path: "/registro-br",
+    name: "Registro BR",
+    component: RegistroBR,
+  },
+  {
+    path: "/taxas",
+    name: "Taxas",
+    component: Taxas,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

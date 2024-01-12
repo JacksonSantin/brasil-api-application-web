@@ -1,16 +1,16 @@
 import { onMounted, ref } from "vue";
-import { Pix } from "../domain/model/pix";
+import { Ncm } from "../domain/model/ncm";
 import { headers } from "../const/headers";
 import Toastify from "toastify-js";
 
-const pixController = (getPixUseCase) => () => {
-  const modelPix = ref(new Pix({}));
+const ncmController = (getNcmUseCase) => () => {
+  const modelNcm = ref(new Ncm({}));
   const rows = ref([]);
   const header = ref(headers);
 
-  const getPix = async () => {
+  const getNcm = async () => {
     try {
-      rows.value = await getPixUseCase();
+      rows.value = await getNcmUseCase();
     } catch (error) {
       Toastify({
         text: error,
@@ -27,14 +27,14 @@ const pixController = (getPixUseCase) => () => {
   };
 
   onMounted(() => {
-    getPix();
+    getNcm();
   });
 
   return {
-    modelPix,
+    modelNcm,
     header,
     rows,
   };
 };
 
-export { pixController };
+export { ncmController };
