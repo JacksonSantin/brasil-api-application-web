@@ -8,6 +8,7 @@ const bankController = (getBanksUseCase) => () => {
   const itemsBank = ref([]);
   const modelBank = ref(new Banks({}));
   const dialogForm = ref(false);
+  const search = ref("");
 
   const getBanks = async () => {
     try {
@@ -42,6 +43,7 @@ const bankController = (getBanksUseCase) => () => {
     dialogForm,
     modelBank,
     showItem,
+    search,
   };
 };
 

@@ -12,6 +12,7 @@ const ibgeController = (getIbgeUseCase, getCityUseCase) => () => {
   const headers = ref(headersIBGE);
   const dialogForm = ref(false);
   const loading = ref(false);
+  const search = ref("");
 
   const getIbge = async () => {
     try {
@@ -67,6 +68,7 @@ const ibgeController = (getIbgeUseCase, getCityUseCase) => () => {
     rows,
     showItem,
     dialogForm,
+    search,
   };
 };
 

@@ -3,10 +3,24 @@
     :items="controller.rows.value"
     :headers="controller.headers.value"
     :loading="controller.loading.value"
+    :search="controller.search.value"
     class="elevation-1"
     density="compact"
     show-expand
   >
+    <template v-slot:top>
+      <v-text-field
+        v-model="controller.search.value"
+        label="Buscar"
+        prepend-inner-icon="mdi-magnify"
+        density="compact"
+        variant="solo-filled"
+        class="pa-2"
+        single-line
+        flat
+        hide-details
+      ></v-text-field>
+    </template>
     <template v-slot:item.actions="{ item }">
       <v-icon
         size="small"

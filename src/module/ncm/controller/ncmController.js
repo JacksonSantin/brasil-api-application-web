@@ -7,6 +7,7 @@ const ncmController = (getNcmUseCase) => () => {
   const modelNcm = ref(new Ncm({}));
   const rows = ref([]);
   const header = ref(headers);
+  const search = ref("");
 
   const getNcm = async () => {
     try {
@@ -34,6 +35,7 @@ const ncmController = (getNcmUseCase) => () => {
     modelNcm,
     header,
     rows,
+    search,
   };
 };
 
