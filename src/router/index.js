@@ -12,6 +12,7 @@ import NCM from "@/module/ncm/view/ncmScreen.vue";
 import PIX from "@/module/pix/view/pixScreen.vue";
 import RegistroBR from "@/module/registroBr/view/registroBrScreen.vue";
 import Taxas from "@/module/taxa/view/taxaScreen.vue";
+import Fipe from "@/module/fipe/view/fipeScreen.vue"
 
 const routes = [
   { path: "/", redirect: "/banks" },
@@ -49,6 +50,11 @@ const routes = [
     path: "/feriados-nacionais",
     name: "Feriados Nacionais",
     component: NationalHolidays,
+  },
+  {
+    path: "/fipe",
+    name: "FIPE",
+    component: Fipe,
   },
   {
     path: "/ibge",
