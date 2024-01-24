@@ -1,22 +1,21 @@
 import { ref, onMounted } from "vue";
-import { headersIBGE } from "../const/headersIBGE";
-import { City } from "../domain/model/city";
-import { IBGE } from "../domain/model/IBGE";
+import { headersCity } from "../const/headersCity";
+import { Place } from "../domain/model/place";
 import Toastify from "toastify-js";
 
-const ibgeController = (getIbgeUseCase, getCityUseCase) => () => {
-  const modelIbge = ref(new IBGE({}));
-  const modelCity = ref(new City({}));
-  const uf = ref("");
-  const rows = ref([]);
-  const headers = ref(headersIBGE);
-  const dialogForm = ref(false);
+const cityController = (getCityUseCase, getPlaceUseCase) => () => {
   const loading = ref(false);
+  const dialogForm = ref(false);
+  const headersCitys = ref(headersCity);
+  const cityName = ref("");
+  const itemsCity = ref([]);
+  const modelPlace = ref(new Place({}));
   const search = ref("");
 
-  const getIbge = async () => {
+  const getCity = async () => {
     try {
-      rows.value = await getIbgeUseCase();
+      loading.value = true;
+      itemsCity.value = await getCityUseCase();
     } catch (error) {
       Toastify({
         text: error,
@@ -29,14 +28,16 @@ const ibgeController = (getIbgeUseCase, getCityUseCase) => () => {
           borderRadius: "50px",
         },
       }).showToast();
+    } finally {
+      loading.value = false;
     }
   };
 
   const showItem = async (item) => {
     try {
       loading.value = true;
-      uf.value = item;
-      modelCity.value = await getCityUseCase(item);
+      cityName.value = item;
+      modelPlace.value = await getPlaceUseCase(item);
       dialogForm.value = true;
     } catch (error) {
       Toastify({
@@ -56,20 +57,19 @@ const ibgeController = (getIbgeUseCase, getCityUseCase) => () => {
   };
 
   onMounted(async () => {
-    await getIbge();
+    await getCity();
   });
 
   return {
-    modelIbge,
-    modelCity,
     loading,
-    uf,
-    headers,
-    rows,
-    showItem,
     dialogForm,
+    headersCitys,
+    cityName,
+    itemsCity,
+    modelPlace,
     search,
+    showItem,
   };
 };
 
-export { ibgeController };
+export { cityController };

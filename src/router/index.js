@@ -4,6 +4,9 @@ import Cep from "@/module/cep/view/cepScreen.vue";
 import CepV2 from "@/module/cepV2/view/cepV2Screen.vue";
 import CNPJ from "@/module/cnpj/view/cnpjScreen.vue";
 import Brokers from "@/module/brokers/view/brokersScreen.vue";
+import CPTECCapitals from "@/module/CPTECCapitals/view/cptecCapitalsScreen.vue";
+import CPTECAirports from "@/module/CPTECAirports/view/cptecAirportsScreen.vue";
+import CPTECCity from "@/module/CPTECCity/view/cptecCityScreen.vue";
 import DDD from "@/module/ddd/view/dddScreen.vue";
 import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue";
 import IBGE from "@/module/IBGE/view/ibgeScreen.vue";
@@ -12,7 +15,8 @@ import NCM from "@/module/ncm/view/ncmScreen.vue";
 import PIX from "@/module/pix/view/pixScreen.vue";
 import RegistroBR from "@/module/registroBr/view/registroBrScreen.vue";
 import Taxas from "@/module/taxa/view/taxaScreen.vue";
-import Fipe from "@/module/fipe/view/fipeScreen.vue"
+import Fipe from "@/module/fipe/view/fipeScreen.vue";
+import Cidades from "@/module/city/view/cityScreen.vue";
 
 const routes = [
   { path: "/", redirect: "/banks" },
@@ -40,6 +44,21 @@ const routes = [
     path: "/corretoras",
     name: "Corretoras",
     component: Brokers,
+  },
+  {
+    path: "/cptec-capitais",
+    name: "CPTEC - Capitais",
+    component: CPTECCapitals,
+  },
+  {
+    path: "/cptec-aeroporto",
+    name: "CPTEC - Aeroporto",
+    component: CPTECAirports,
+  },
+  {
+    path: "/cptec-cidade",
+    name: "CPTEC - Cidade",
+    component: CPTECCity,
   },
   {
     path: "/ddd",
@@ -85,6 +104,11 @@ const routes = [
     path: "/taxas",
     name: "Taxas",
     component: Taxas,
+  },
+  {
+    path: "/cidade",
+    name: "Cidades",
+    component: Cidades,
   },
 ];
 

@@ -25,9 +25,19 @@ export const menu = [
     path: "/corretoras",
   },
   {
-    nome: "CPTEC",
+    nome: "CPTEC - Capitais",
     icone: "mdi-weather-partly-cloudy",
-    path: "/cptec",
+    path: "/cptec-capitais",
+  },
+  {
+    nome: "CPTEC - Aeroporto",
+    icone: "mdi-weather-partly-cloudy",
+    path: "/cptec-aeroporto",
+  },
+  {
+    nome: "CPTEC - Cidade",
+    icone: "mdi-weather-partly-cloudy",
+    path: "/cptec-cidade",
   },
   {
     nome: "DDD",
@@ -73,5 +83,10 @@ export const menu = [
     nome: "Taxas",
     icone: "mdi-chart-line",
     path: "/taxas",
+  },
+  {
+    nome: "Cidade",
+    icone: "mdi-city",
+    path: "/cidade",
   },
 ]
