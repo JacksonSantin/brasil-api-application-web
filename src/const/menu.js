@@ -40,6 +40,11 @@ export const menu = [
     path: "/cptec-cidade",
   },
   {
+    nome: "CPTEC - Ondas",
+    icone: "mdi-weather-partly-cloudy",
+    path: "/cptec-ondas",
+  },
+  {
     nome: "DDD",
     icone: "mdi-phone",
     path: "/ddd",

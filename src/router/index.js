@@ -4,9 +4,10 @@ import Cep from "@/module/cep/view/cepScreen.vue";
 import CepV2 from "@/module/cepV2/view/cepV2Screen.vue";
 import CNPJ from "@/module/cnpj/view/cnpjScreen.vue";
 import Brokers from "@/module/brokers/view/brokersScreen.vue";
-import CPTECCapitals from "@/module/CPTECCapitals/view/cptecCapitalsScreen.vue";
-import CPTECAirports from "@/module/CPTECAirports/view/cptecAirportsScreen.vue";
-import CPTECCity from "@/module/CPTECCity/view/cptecCityScreen.vue";
+import CPTECCapitals from "@/module/cptec/CPTECCapitals/view/cptecCapitalsScreen.vue";
+import CPTECAirports from "@/module/cptec/CPTECAirports/view/cptecAirportsScreen.vue";
+import CPTECCity from "@/module/cptec/CPTECCity/view/cptecCityScreen.vue";
+import CPTECWaves from "@/module/cptec/CPTECWaves/view/cptecWaveScreen.vue";
 import DDD from "@/module/ddd/view/dddScreen.vue";
 import NationalHolidays from "@/module/nationalHolidays/view/nationalHolidaysScreen.vue";
 import IBGE from "@/module/IBGE/view/ibgeScreen.vue";
@@ -59,6 +60,11 @@ const routes = [
     path: "/cptec-cidade",
     name: "CPTEC - Cidade",
     component: CPTECCity,
+  },
+  {
+    path: "/cptec-ondas",
+    name: "CPTEC - Ondas",
+    component: CPTECWaves,
   },
   {
     path: "/ddd",
