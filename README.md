@@ -6,20 +6,6 @@
 ---
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/JacksonSantin/brasil-api-application-web?color=%238257E5">
-
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/JacksonSantin/brasil-api-application-web?color=%238257E5">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/JacksonSantin/brasil-api-application-web?color=%238257E5">
-  
-  <a href="https://github.com/JacksonSantin/proffy/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JacksonSantin/brasil-api-application-web?color=%238257E5">
-  </a>
-   
-   <a href="https://github.com/JacksonSantin/proffy/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/JacksonSantin/brasil-api-application-web?color=%238257E5">
-  </a>
-
   <a href="http://about-me-jacksonsantin.vercel.app/">
     <img alt="Feito por Jackson Dhanyel Santin" src="https://img.shields.io/badge/feito%20por-Jackson-%238257E5">
   </a>
