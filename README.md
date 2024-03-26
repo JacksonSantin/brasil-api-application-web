@@ -6,7 +6,7 @@
 ---
 
 <p align="center">
-  <a href="http://about-me-jacksonsantin.vercel.app/">
+  <a href="https://about-me-jacksonsantin.vercel.app/">
     <img alt="Feito por Jackson Dhanyel Santin" src="https://img.shields.io/badge/feito%20por-Jackson-%238257E5">
   </a>
 </p>
@@ -54,12 +54,18 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 🦸 Autor
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/30778051?v=4" width="100px;" alt=""/><br /><sub><b>Jackson Dhanyel Santin</b></sub>
+<table>
+  <tr>
+    <td align="center"><a href="https://about-me-jacksonsantin.vercel.app/"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/30778051?v=4" width="100px;" alt=""/><br /><sub><b>Jackson Dhanyel Santin</b></sub></a></td>
+  </tr>
+</table>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Linkedin-0077b5?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jackson-dhanyel-santin/)](https://www.linkedin.com/in/jackson-dhanyel-santin/)
-[![Twitter Badge](https://img.shields.io/badge/-Twitter-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/DhanyelJack)](https://twitter.com/DhanyelJack)
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-c71610?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jackdhanyelsn@gmail.com)](mailto:jackdhanyelsn@gmail.com)
-
+<a href="https://instagram.com/jackson_santin" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+<a href="https://twitter.com/dhanyeljack" target="_blank"><img src="https://img.shields.io/badge/Twitter-1d9bf0?style=for-the-badge&logo=twitter&logoColor=white" target="_blank"></a>
+<a href="https://fb.com/jackson.santin.52" target="_blank"><img src="https://img.shields.io/badge/Facebook-1877f2?style=for-the-badge&logo=facebook&logoColor=white" target="_blank"></a> 
+<a href = "mailto:jackdhanyelsn@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/jackson-dhanyel-santin" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+<a href="https://about-me-jacksonsantin.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/-JDS SISTEMAS-333333?style=for-the-badge&logo=web&logoColor=white" target="_blank"></a> 
 ---
 
 
